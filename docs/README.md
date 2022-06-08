@@ -46,10 +46,13 @@ Following are the sample procedure an examination of our department,
 
 There are staff members who are incharge for each of these phases and there are deadlines for these as well.
 
-Then those lecturers are supposed to complete these phases on or before the given deadlines. Since several lecturers are engaging in these phases we need to have a system to track the progress of the procedure and a reminder system to get the work done within the given time in order to finish the examinations as expected and send the results to the AR office. 
+Then those lecturers are supposed to complete these phases on or before the given deadlines. Several lecturers are engaging in these phases and also since they are tightly busy with their schedules there can be some mistakes like forgetting the deadlines. Therefore, we need to have a system to track the progress of the procedure and a reminder system to get the work done within the given time in order to finish the examinations as expected and send the results to the AR office. 
 
 
 ## Other Sub Topics
+### Our solution
+
+With this Automated Notification System that we are expecting to develop reminders will be sent automatically to the assigned lecturers before the deadlines.
 
 .....
 
