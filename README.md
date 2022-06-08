@@ -10,7 +10,7 @@ Advisor
 Team Members
 * Rajasooriya J.M.
 * Ranasinghe R.D.J.M.
-* De Silva M.G.S.M.
+* De Silva M.S.G.M.
 
 This is an automated system that can be used on examination tasks. The system is able to send reminders (basically via email) to respective parties, which consist of the details about their task. The reminders are sent before 3 days to the deadline.
 
