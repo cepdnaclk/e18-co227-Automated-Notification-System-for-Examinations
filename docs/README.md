@@ -12,9 +12,11 @@ title:
 # Automated Notification System for Examinations
 
 ---
+<div class="figure container">
+<img class="mx-auto d-block" src="./images/sample.jpg" alt="Sample Image" width="320"/>
+<p class="caption text-center"></p>
+</div>
 
-
-![Sample Image](./images/sample.jpg)
 
 
 ## Team
