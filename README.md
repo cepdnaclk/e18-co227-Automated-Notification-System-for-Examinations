@@ -22,4 +22,4 @@ Technologies and Protocols which are used in this project are,
 * MySQL (DBMS)
 * Github (Version Control)
 
-System is projected to be extended to further phases in which it can also send reminders via discord.
+System is projected to be extended to a further phase in which it can also send reminders via discord.
