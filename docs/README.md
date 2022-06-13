@@ -20,9 +20,9 @@ title:
 
 
 ## Team
--  E/18/276, Rajasooriya J.M., [email](mailto:e18276@eng.pdn.ac.lk)
--  E/18/283, Ranasinghe R.D.J.M., [email](mailto:e18283@eng.pdn.ac.lk)
--  E/18/412, De Silva M.S.G.M., [email](mailto:e18412@eng.pdn.ac.lk)
+-  E/18/276, Rajasooriya J.M.,[e18276@eng.pdn.ac.lk](mailto:e18276@eng.pdn.ac.lk)
+-  E/18/283, Ranasinghe R.D.J.M.,[e18283@eng.pdn.ac.lk](mailto:e18283@eng.pdn.ac.lk)
+-  E/18/412, De Silva M.S.G.M.,[e18412@eng.pdn.ac.lk](mailto:e18412@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
