@@ -54,9 +54,15 @@ Then those lecturers are supposed to complete these phases on or before the give
 ## Other Sub Topics
 ### Our solution
 
-With this Automated Notification System that we are expecting to develop reminders will be sent automatically to the assigned lecturers before the deadlines.
+With this Automated Notification System that we are expecting to develop reminders, that will be sent automatically to the assigned lecturers before the deadlines.
 
-.....
+
+### Data Flow
+
+ - Data is entered into a table in a Google Sheet
+ - After inputting, data in the Google Sheet is sent to the Database via Sheets API
+ - Required records are fetched from the Database and due dates for tasks are compared with current date in Python on a daily basis
+ - If due date is close for a particular task, an email is developed (by python) as sent to required parties
 
 ### ER Diagram of the Database
 
