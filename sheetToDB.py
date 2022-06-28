@@ -10,6 +10,10 @@ from googleapiclient.errors import HttpError
 from google.oauth2 import service_account
 from datetime import datetime
 import createJson
+import configparser
+
+config = configparser.ConfigParser()# read the configuration file
+config.read('config.ini')# get all the connections
 
 #---------------------------------------function to convert date and time in to the required format--------------------------
 def convertDatetime(dateInSheetFormat):
@@ -67,8 +71,8 @@ print(values)
 #***************************************************** DATABASE *********************************************************
 #establishing the connection
 
-#------------------------------ Enter the username and the password -----------------------------
-conn = mysql.connector.connect(user='root', password='', host='localhost', database='co227db3')
+#------------------------------ Enter the credentials of db using config file-----------------------------
+conn = mysql.connector.connect(user=config.get('DB', 'username'), password=config.get('DB', 'password'), host=config.get('DB', 'host'), database=config.get('DB', 'db'))
 #------------------------------------------------------------------------------------------------
 
 #Creating a cursor object using the cursor() method
