@@ -3,12 +3,16 @@ from time import strftime
 import mysql.connector
 from datetime import datetime
 import mailTest
+import configparser
+
+config = configparser.ConfigParser()    # read the configuration file
+config.read('config.ini')               # get all the connections
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="",
-    database = "co227db3"
+    host=config.get('DB', 'host'),
+    user=config.get('DB', 'username'),
+    passwd=config.get('DB', 'password'),
+    database = config.get('DB', 'db')
 )
 
 mycursor = mydb.cursor()
