@@ -26,8 +26,10 @@ title:
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Other Sub Topics](#other-sub-topics)
-3. [Links](#links)
+2. [Solution](#our-solution)
+3. [Data Flow](#data-flow)
+4. [ER Diagram of the Database](#er-diagram-of-the-database)
+5. [Links](#links)
 
 ---
 
@@ -51,20 +53,20 @@ There are staff members who are incharge for each of these phases and there are 
 Then those lecturers are supposed to complete these phases on or before the given deadlines. Several lecturers are engaging in these phases and also since they are tightly busy with their schedules there can be some mistakes like forgetting the deadlines. Therefore, we need to have a system to track the progress of the procedure and a reminder system to get the work done within the given time in order to finish the examinations as expected and send the results to the AR office. 
 
 
-## Other Sub Topics
-### Our solution
+
+## Our solution
 
 With this Automated Notification System that we are expecting to develop reminders, that will be sent automatically to the assigned lecturers before the deadlines.
 
 
-### Data Flow
+## Data Flow
 
  - Data is entered into a table in a Google Sheet
  - After inputting, data in the Google Sheet is sent to the Database via Sheets API
  - Required records are fetched from the Database and due dates for tasks are compared with current date in Python on a daily basis
  - If due date is close for a particular task, an email is developed (by python) as sent to required parties
 
-### ER Diagram of the Database
+## ER Diagram of the Database
 
 <div class="figure container">
 <img class="mx-auto d-block" src="./images/er_diagram.png" alt="ER Diagram" width="420"/>
