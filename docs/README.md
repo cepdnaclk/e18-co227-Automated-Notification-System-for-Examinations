@@ -56,10 +56,15 @@ Then those lecturers are supposed to complete these phases on or before the give
 
 ## Our solution
 
-With this Automated Notification System that we are expecting to develop reminders, that will be sent automatically to the assigned lecturers before the deadlines.
+With this Automated Notification System that we are expecting to develop, the reminders will be sent automatically to the assigned lecturers before the deadlines. Due dates will be checked before like 3 days(this can be changed according to the department requirment). The body of the email will differ according to the different phases.
 
 
 ## Data Flow
+
+<div class="figure container">
+<img class="mx-auto d-block" src="./images/dataflow.png" alt="Data Flow" width="320"/>
+<p class="caption text-center"></p>
+</div>
 
  - Data is entered into a table in a Google Sheet
  - After inputting, data in the Google Sheet is sent to the Database via Sheets API
