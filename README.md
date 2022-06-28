@@ -23,3 +23,8 @@ Technologies and Protocols which are used in this project are,
 * Github (Version Control)
 
 System is projected to be extended to a further phase in which it can also send reminders via discord.
+
+
+___
+- [Project Page](https://cepdnaclk.github.io/e18-co227-Automated-Notification-System-for-Examinations/)
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
