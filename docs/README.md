@@ -67,7 +67,7 @@ With this Automated Notification System that we are expecting to develop reminde
 ### ER Diagram of the Database
 
 <div class="figure container">
-<img class="mx-auto d-block" src="./images/er_diagram.png" alt="ER Diagram" width=50%/>
+<img class="mx-auto d-block" src="./images/er_diagram.png" alt="ER Diagram" width="420"/>
 <p class="caption text-center"></p>
 </div>
 
