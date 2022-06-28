@@ -105,7 +105,7 @@ for phase_code in range (1,8):
         # SENT
         # HERE
         mailTest.sendRemainder(receiver_email,subjectLine,msg)
-        token = "add your discord token here"
+        token = config.get('Discord','Token')
         sendMessage(token,channel_id1,msgDiscord)
         
         # -----------------------------------------------------------------------------
