@@ -58,6 +58,13 @@ With this Automated Notification System that we are expecting to develop reminde
 
 .....
 
+### ER Diagram of the Database
+
+<div class="figure container">
+<img class="mx-auto d-block" src="./images/ERD of automated exam notification system.jpeg" alt="ER Diagram" width="320"/>
+<p class="caption text-center"></p>
+</div>
+
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
