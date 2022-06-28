@@ -68,7 +68,7 @@ for phase_code in range (1,8):
 
 
     #sql query for selecting data
-    mycursor.execute("select l.Email_address, e.examination_name, p.course_code, l.title, l.name, ph.phase_code, ph.due_date from paper as p JOIN phase as ph ON ph.course_code = p.course_code JOIN lecturer as l ON "+queryLine+" JOIN examination as e ON p.examination_id=e.examination_id where ph.phase_code="+str(phase_code))
+    mycursor.execute("select l.Email_address, e.examination_name, p.course_code, l.title, l.name, ph.phase_code, ph.due_date, l.channel_id from paper as p JOIN phase as ph ON ph.course_code = p.course_code JOIN lecturer as l ON "+queryLine+" JOIN examination as e ON p.examination_id=e.examination_id where ph.phase_code="+str(phase_code))
     # -----------------------------------------------------------------------
     # records can be filtered by due dates (comparing them with current date)
     #   ex: <above query> + where ph.due_date = <current_date-3days>
@@ -85,8 +85,10 @@ for phase_code in range (1,8):
         assignee_title = row[3]
         assignee_name = row[4]
         due_date = row[6]
+        channel_id1 = row[7]
         subjectLine = '{}: {} Task reminder'.format(exam_name , course_code)   #The subject line
         msg = "To:-"+receiver_email+"\n"+task+" - "+course_code+" - "+exam_name+"\n "+assignee_title+" "+assignee_name+",\n Due date for "+task.lower()+" is "+due_date.strftime('%d/%m/%Y')+". Please ignore this message if the task is already completed\n"
+        msgDiscord = "\n\n" + task+" - "+course_code+" - "+exam_name+"\n "+assignee_title+" "+assignee_name+",\n Due date for "+task.lower()+" is "+due_date.strftime('%d/%m/%Y')+". \n Please ignore this message if the task is already completed\n\n\n"
         
         print (msg)
 
@@ -103,6 +105,9 @@ for phase_code in range (1,8):
         # SENT
         # HERE
         mailTest.sendRemainder(receiver_email,subjectLine,msg)
+        token = "add your discord token here"
+        sendMessage(token,channel_id1,msgDiscord)
+        
         # -----------------------------------------------------------------------------
 
         print("\n------------------------------------------")
