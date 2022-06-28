@@ -2,13 +2,18 @@ from ctypes.wintypes import MSG
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import configparser
+
+#read the configuration file and get all the connections
+config = configparser.Configparser()
+config.read('config.ini')
 
 def sendRemainder(receiver_address, subject,msg):
     #The mail addresses and password
 
     #----------------edit this [only if changing the sender's mail]-------------------------------------------
-    sender_address = 'exam.reminder4@gmail.com'
-    sender_pass = 'ueulbrxxzkxfhfqz'
+    sender_address = config.get('SenderMail','sender_address')
+    sender_pass = config.get('SenderMail','sender_pass')
     #--------------------------------------------------------------------
 
     #Setup the MIME :MIME (Multipurpose Internet Mail Extensions) is an extension of 
