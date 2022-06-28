@@ -47,7 +47,7 @@ CREATE TABLE `Paper` (
 INSERT INTO DEPARTMENT(Department_id,Department_name,Department_head_id,Email_Address,Telephone_number) VALUES(1,'Computer Engineering Department',1,'ce@eng.pdn.ac.lk','+94xxxxxxxxx');             
 -- change the email address in here --
 
-INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (1,1,'Kamalanath Samarakoon','Dr','sanjayagihandesilva@gmail.com','+94715751733');
-INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (2,1,'Sithumini Ekanayake','Dr','sanjayagihandesilva@gmail.com','+94715751733');
-INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (3,1,'Swarnalatha Radhakrishnan','Dr','sanjayagihandesilva@gmail.com','+94715751733');
-INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (4,1,'Manjula Sandirigama','Dr','sanjayagihandesilva@gmail.com','+94715751733');
+INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (1,1,'Kamalanath Samarakoon','Dr','sanjayagihandesilva@gmail.com','+94xxxxxxxxx');
+INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (2,1,'Sithumini Ekanayake','Dr','sanjayagihandesilva@gmail.com','+94xxxxxxxxx');
+INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (3,1,'Swarnalatha Radhakrishnan','Dr','sanjayagihandesilva@gmail.com','+94xxxxxxxxx');
+INSERT INTO LECTURER(Id,Department_id,Name,Title,Email_address,Telephone_number) VALUES (4,1,'Manjula Sandirigama','Dr','sanjayagihandesilva@gmail.com','+94xxxxxxxxx');
