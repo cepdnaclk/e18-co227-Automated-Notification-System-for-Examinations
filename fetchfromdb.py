@@ -68,14 +68,15 @@ for phase_code in range (1,8):
 
 
     #sql query for selecting data
-    mycursor.execute("select l.Email_address, e.examination_name, p.course_code, l.title, l.name, ph.phase_code, ph.due_date, l.channel_id from paper as p JOIN phase as ph ON ph.course_code = p.course_code JOIN lecturer as l ON "+queryLine+" JOIN examination as e ON p.examination_id=e.examination_id where ph.phase_code="+str(phase_code))
+    mycursor.execute("select l.Email_address, e.examination_name, p.course_code, l.title, l.name, ph.phase_code, ph.due_date, l.channel_id, l.id from paper as p JOIN phase as ph ON ph.course_code = p.course_code JOIN lecturer as l ON "+queryLine+" JOIN examination as e ON p.examination_id=e.examination_id where ph.phase_code="+str(phase_code))
     # -----------------------------------------------------------------------
     # records can be filtered by due dates (comparing them with current date)
     #   ex: <above query> + where ph.due_date = <current_date-3days>
     # -----------------------------------------------------------------------
 
     result = mycursor.fetchall()
-
+    mydb.commit()
+    
     #By following loop, email message for each phase code of every course is composed
     for row in result:
         #each row containes receiver's email address, examination name, course code, title, assignee name, phase code and due date as a tuple
@@ -86,8 +87,18 @@ for phase_code in range (1,8):
         assignee_name = row[4]
         due_date = row[6]
         channel_id1 = row[7]
+        lecturer_id = row[8]
+        
+        #department details for each lecturer will be taken and send to the sendRemainder funtion as a parameter
+        departmentDetails = "select department_name, email_address, telephone_number from department where department_id = (select department_id from lecturer where id = {})".format(lecturer_id)
+        mycursor.execute(departmentDetails)
+        department = mycursor.fetchall()
+        
         subjectLine = '{}: {} Task reminder'.format(exam_name , course_code)   #The subject line
-        msg = "To:-"+receiver_email+"\n"+task+" - "+course_code+" - "+exam_name+"\n "+assignee_title+" "+assignee_name+",\n Due date for "+task.lower()+" is "+due_date.strftime('%d/%m/%Y')+". Please ignore this message if the task is already completed\n"
+        
+        #msg edited with | to split and editing purposes in mailTest.py file (for custormizing the email)
+        msg = "To:-"+receiver_email+"\n|"+task+" - "+course_code+" - "+exam_name+"|\n"+assignee_title+". "+assignee_name+",|\n\nDue date for "+task.lower()+" is |"+due_date.strftime('%d/%m/%Y')+".\n\n\n|Please ignore this message if the task is already completed\n"
+       
         msgDiscord = "\n\n" + task+" - "+course_code+" - "+exam_name+"\n "+assignee_title+" "+assignee_name+",\n Due date for "+task.lower()+" is "+due_date.strftime('%d/%m/%Y')+". \n Please ignore this message if the task is already completed\n\n\n"
         
         print (msg)
@@ -104,7 +115,7 @@ for phase_code in range (1,8):
         # BE
         # SENT
         # HERE
-        mailTest.sendRemainder(receiver_email,subjectLine,msg)
+        mailTest.sendRemainder(receiver_email,subjectLine,msg,department)
         token = config.get('Discord','Token')
         sendMessage(token,channel_id1,msgDiscord)
         
