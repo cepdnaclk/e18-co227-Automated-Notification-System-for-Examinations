@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 import configparser
 
 #read the configuration file and get all the connections
-config = configparser.Configparser()
+config = configparser.ConfigParser()
 config.read('config.ini')
 
 def sendRemainder(receiver_address, subject,msg,departmentDetails):
