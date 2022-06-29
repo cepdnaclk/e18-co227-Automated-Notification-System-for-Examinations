@@ -4,6 +4,7 @@ import mysql.connector
 from datetime import datetime
 import mailTest
 import configparser
+import sendDiscord
 
 config = configparser.ConfigParser()    # read the configuration file
 config.read('config.ini')               # get all the connections
@@ -116,12 +117,13 @@ for phase_code in range (1,8):
         # SENT
         # HERE
         mailTest.sendRemainder(receiver_email,subjectLine,msg,department)
-        token = config.get('Discord','Token')
-        sendMessage(token,channel_id1,msgDiscord)
+        token = config.get('Discord','token')
+        sendDiscord.sendMessage(token,channel_id1,msgDiscord)
         
         # -----------------------------------------------------------------------------
 
         print("\n------------------------------------------")
-    
+        
     print("\n")
     print("***************************************************")
+    
