@@ -26,7 +26,9 @@ def convertDatetime(dateInSheetFormat):
 #--------------------------------------------------------------------------------------------------------------------------
 def fromsheet():
    config = configparser.ConfigParser()# read the configuration file
-   config.read('config.ini')# get all the connections
+   
+   #------------copy the config.ini file path and paste it to here--------------
+   config.read('C:\_code_\django_project\e18-co227-Automated-Notification-System-for-Examinations\config.ini')# get all the connections
 
    #******************************************** CREDENTIALS FOR THE GOOGLE SHEET ****************************************
 
@@ -34,8 +36,9 @@ def fromsheet():
    # The file keys.json stores the user's access and refresh tokens, and is
    # created automatically when the authorization flow completes for the first
    # time.
-   createJson.createJsonKeyFile()
-   SERVICE_ACCOUNT_FILE = 'keys.json'
+   #createJson.createJsonKeyFile()
+   #------------copy the config.ini file path and paste it to here--------------
+   SERVICE_ACCOUNT_FILE = 'C:\_code_\django_project\e18-co227-Automated-Notification-System-for-Examinations\keys.json'
    SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
    creds = None
@@ -128,13 +131,13 @@ def fromsheet():
          lecturer_id.clear() #list of id's is cleared
       
       conn.close()
-      return "Successfull"
+      return "Database update: Successful"
    except:
       # Rolling back in case of error
       print("error occured! ---1")
       conn.rollback()
       conn.close()
-      return "Not successfull"
+      return "Database update: Not successful"
    
 
 if __name__ == '__main__':
