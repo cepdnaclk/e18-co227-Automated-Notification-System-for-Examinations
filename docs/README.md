@@ -82,6 +82,11 @@ With this Automated Notification System that we are expecting to develop, the re
 
 - [Follow this video](https://www.youtube.com/embed/txRbFpupne0){:target="_blank"}
 
+<!-- blank line -->
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/txRbFpupne0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+<!-- blank line -->
 
 
 ## Links
