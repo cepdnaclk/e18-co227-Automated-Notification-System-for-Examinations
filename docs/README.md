@@ -59,7 +59,7 @@ Then those lecturers are supposed to complete these phases on or before the give
 With this Automated Notification System that we are expecting to develop, the reminders will be sent automatically to the assigned lecturers before the deadlines. Due dates will be checked before like 3 days(this can be changed according to the department requirment). The body of the email will differ according to the different phases.
 
 # Installation Procedure
-#### (steps are given to run the system in python anywhere)
+#### (steps are given to run the system in python anywhere, after creating the keys.json file using config,ini and createJson.py)
 #### using the website created (Recomended)
 - Create a task in Pythonanywhere by using fetchfromdb.py 
 - Create the Database by running the createtables.sql file
