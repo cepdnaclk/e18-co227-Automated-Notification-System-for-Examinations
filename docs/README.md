@@ -78,6 +78,12 @@ With this Automated Notification System that we are expecting to develop, the re
 <p class="caption text-center"></p>
 </div>
 
+## Google Account Setup
+
+- [Follow this video](https://www.youtube.com/embed/txRbFpupne0){:target="_blank"}
+
+
+
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
