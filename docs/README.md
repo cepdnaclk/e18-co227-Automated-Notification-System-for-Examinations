@@ -19,12 +19,12 @@ title:
 
 
 
-## Team
+# Team
 -  E/18/276, Rajasooriya J.M.,[e18276@eng.pdn.ac.lk](mailto:e18276@eng.pdn.ac.lk)
 -  E/18/283, Ranasinghe R.D.J.M.,[e18283@eng.pdn.ac.lk](mailto:e18283@eng.pdn.ac.lk)
 -  E/18/412, De Silva M.S.G.M.,[e18412@eng.pdn.ac.lk](mailto:e18412@eng.pdn.ac.lk)
 
-## Table of Contents
+# Table of Contents
 1. [Introduction](#introduction)
 2. [Solution](#our-solution)
 3. [Data Flow](#data-flow)
@@ -33,7 +33,7 @@ title:
 
 ---
 
-## Introduction
+# Introduction
 
 Normally holding examinations are not that easy. From making the paper to finalizing the marks, it has different phases that different lecturers are engaging in order to complete an examination completely.
 
@@ -54,12 +54,12 @@ Then those lecturers are supposed to complete these phases on or before the give
 
 
 
-## Our solution
+# Our solution
 
 With this Automated Notification System that we are expecting to develop, the reminders will be sent automatically to the assigned lecturers before the deadlines. Due dates will be checked before like 3 days(this can be changed according to the department requirment). The body of the email will differ according to the different phases.
 
 
-## Data Flow
+# Data Flow
 
 <div class="figure container">
 <img class="mx-auto d-block" src="./images/dataflow.png" alt="Data Flow" width="320"/>
@@ -71,14 +71,14 @@ With this Automated Notification System that we are expecting to develop, the re
  - Required records are fetched from the Database and due dates for tasks are compared with current date in Python on a daily basis
  - If due date is close for a particular task, an email is developed (by python) as sent to required parties
 
-## ER Diagram of the Database
+# ER Diagram of the Database
 
 <div class="figure container">
 <img class="mx-auto d-block" src="./images/er_diagram.png" alt="ER Diagram" width="420"/>
 <p class="caption text-center"></p>
 </div>
 
-## Google Account Setup
+# Google Account Setup
 
 - [Follow this video](https://www.youtube.com/embed/txRbFpupne0){:target="_blank"}
 
@@ -88,8 +88,36 @@ With this Automated Notification System that we are expecting to develop, the re
 </figure>
 <!-- blank line -->
 
+# Stept we took...
 
-## Links
+#### STEP 01 : Get google sheet data and store in a database
+
+- Access the google sheet with the credentials
+- Call the sheets API and get the information
+- Connect the database
+- Insert data into the database
+
+#### STEP 02 : Fetching data from Database
+
+- Use SQL query foe selecting the required data
+- Designing the content of the amil body
+
+#### STEP 03 : Send E-Mail
+
+- Email messages can be easily sent by using python. But, there are few requirements. In order to send emails from python user needs to provide "Less secure app access" permission. But, google shutdown this feature. However, this limitation does not apply to Google Workspace or Google Cloud indentity users.
+
+#### STEP 04 : Send Discord messages
+
+- To send discord messages two things are required.
+- Token : Token is used to identify the sender of the message
+- Channel ID : Channel ID is used to identify the reciever of the message
+
+#### STEP 05 : Upload the system to a server
+
+- We use pythonanywhere as the server of our system. Even with a free account at python anywhere we can host our python
+ scripts there. Also, we can shedule tasks (similar to linux crontabs) very easily. We can even create our database in pythonanywhere which helps it's users to use most services at a single place.
+ 
+# Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
 - [Project Page](https://cepdnaclk.github.io/{{ page.repository-name}}){:target="_blank"}
