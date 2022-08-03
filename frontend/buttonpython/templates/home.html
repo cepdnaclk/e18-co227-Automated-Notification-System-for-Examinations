@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Notification System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" type="text/css">
+    
+</head>
+<body>
+    <div class="imageContainer" id="imageContainer">
+        <div class="topNavigationBar">
+          <img>
+          <ul>
+            
+            <li><a href="https://docs.google.com/document/d/e/2PACX-1vRULmmwk1-6KQQVYkBWmIJNOliC-H1O2DJGPqlfI2vyHgzjo9IHS7AoeVPW9RoxnQn8_cLqOmkXrkFy/pub", target="_blank">Examination Schedules</a></li>
+            <li><a href="https://projects.ce.pdn.ac.lk/co227/e18/Automated-Notification-System-for-Examinations/", target="_blank">Project Details</a></li>
+            
+  
+          </ul>
+        </div>
+        <div class="content">
+          <h1>Automated Notification System</h1>
+          <h2>for Examinations</h2>
+          <div>
+            <a href='https://docs.google.com/spreadsheets/d/1mDfQQFO-akrOuuU9C9fGnDpt9DqEJmKB1swsRw3_gkE/edit?ouid=114318320533841950564&usp=sheets_home&ths=true', target="_blank">
+              <button type="button"><span></span>Google Sheet</button>
+            </a>
+            
+            <button type="button" onclick="location.href='{% url 'script' %}'"><span></span>Update Database</button>
+            
+            <p>
+                {% if data %}
+                {{data}}
+                {% endif %}
+            </p>
+            
+            
+          </div>
+        </div>
+          
+      </div>
+    
+</body>
+</html>
