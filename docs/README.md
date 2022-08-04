@@ -35,7 +35,7 @@ title:
 
 # Introduction
 
-Normally holding examinations are not that easy. From making the paper to finalizing the marks, it has different phases that different lecturers are engaging in order to complete an examination completely.
+Normally holding examinations is not that easy. From making the paper to finalizing the marks, it has different phases that different lecturers are engaging in order to complete an examination completely.
 
 Following are the sample procedure an examination of our department,
 
@@ -56,7 +56,7 @@ Then those lecturers are supposed to complete these phases on or before the give
 
 # Our solution
 
-With this Automated Notification System that we are expecting to develop, the reminders will be sent automatically to the assigned lecturers before the deadlines. Due dates will be checked before like 3 days(this can be changed according to the department requirment). The body of the email will differ according to the different phases.
+With this Automated Notification System that we are expecting to develop, the reminders will be sent automatically to the assigned lecturers before the deadlines. Due dates will be checked before like 3 days(this can be changed according to the department requirement). The body of the email will differ according to the different phases.
 
 # Data Flow
 
@@ -88,11 +88,11 @@ With this Automated Notification System that we are expecting to develop, the re
 <!-- blank line -->
 
 # Installation Procedure
-#### (steps are given to run the system in python anywhere, after creating the keys.json file using config,ini and createJson.py)
-#### using the website created (Recomended)
+#### (steps are given to run the system in PythonAnywhere, after creating the keys.json file using config,ini and createJson.py)
+#### using the website created (Recommended)
 - Create a task in Pythonanywhere by using fetchfromdb.py 
 - Create the Database by running the createtables.sql file
-- Use the website to initiate the system(create the google sheet & store the data in the databse)
+- Use the website to initiate the system(create the google sheet & store the data in the database)
 
 #### manual running
 - Create a task in Pythonanywhere by using fetchfromdb.py 
