@@ -129,6 +129,10 @@ With this Automated Notification System that we are expecting to develop, the re
 - We use pythonanywhere as the server of our system. Even with a free account at python anywhere we can host our python
  scripts there. Also, we can shedule tasks (similar to linux crontabs) very easily. We can even create our database in pythonanywhere which helps it's users to use most services at a single place.
  
+# Testing
+
+- [Test cases](https://docs.google.com/spreadsheets/d/1TR32hVYIOt_z9lZF45tGYNZStyhuSW5tqO0EFPY8WDc/edit?usp=sharing)
+ 
 # Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
