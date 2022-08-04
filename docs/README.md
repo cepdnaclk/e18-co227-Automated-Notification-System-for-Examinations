@@ -58,19 +58,6 @@ Then those lecturers are supposed to complete these phases on or before the give
 
 With this Automated Notification System that we are expecting to develop, the reminders will be sent automatically to the assigned lecturers before the deadlines. Due dates will be checked before like 3 days(this can be changed according to the department requirment). The body of the email will differ according to the different phases.
 
-# Installation Procedure
-#### (steps are given to run the system in python anywhere, after creating the keys.json file using config,ini and createJson.py)
-#### using the website created (Recomended)
-- Create a task in Pythonanywhere by using fetchfromdb.py 
-- Create the Database by running the createtables.sql file
-- Use the website to initiate the system(create the google sheet & store the data in the databse)
-
-#### manual running
-- Create a task in Pythonanywhere by using fetchfromdb.py 
-- Create the Database by running the createtables.sql file
-- create the google sheet(the link is provided inside the sheetToDB.py file. If the user create any other google sheet he has to manually update all the files which uses specific data about the google sheet)
-- Run sheetToDB.py file to get google sheet data into the database
-
 # Data Flow
 
 <div class="figure container">
@@ -100,34 +87,18 @@ With this Automated Notification System that we are expecting to develop, the re
 </figure>
 <!-- blank line -->
 
-# Stept we took...
+# Installation Procedure
+#### (steps are given to run the system in python anywhere, after creating the keys.json file using config,ini and createJson.py)
+#### using the website created (Recomended)
+- Create a task in Pythonanywhere by using fetchfromdb.py 
+- Create the Database by running the createtables.sql file
+- Use the website to initiate the system(create the google sheet & store the data in the databse)
 
-#### STEP 01 : Get google sheet data and store in a database
-
-- Access the google sheet with the credentials
-- Call the sheets API and get the information
-- Connect the database
-- Insert data into the database
-
-#### STEP 02 : Fetching data from Database
-
-- Use SQL query foe selecting the required data
-- Designing the content of the amil body
-
-#### STEP 03 : Send E-Mail
-
-- Email messages can be easily sent by using python. But, there are few requirements. In order to send emails from python user needs to provide "Less secure app access" permission. But, google shutdown this feature. However, this limitation does not apply to Google Workspace or Google Cloud indentity users.
-
-#### STEP 04 : Send Discord messages
-
-- To send discord messages two things are required.
-- Token : Token is used to identify the sender of the message
-- Channel ID : Channel ID is used to identify the reciever of the message
-
-#### STEP 05 : Upload the system to a server
-
-- We use pythonanywhere as the server of our system. Even with a free account at python anywhere we can host our python
- scripts there. Also, we can shedule tasks (similar to linux crontabs) very easily. We can even create our database in pythonanywhere which helps it's users to use most services at a single place.
+#### manual running
+- Create a task in Pythonanywhere by using fetchfromdb.py 
+- Create the Database by running the createtables.sql file
+- create the google sheet(the link is provided inside the sheetToDB.py file. If the user create any other google sheet he has to manually update all the files which uses specific data about the google sheet)
+- Run sheetToDB.py file to get google sheet data into the database
  
 # Testing
 
