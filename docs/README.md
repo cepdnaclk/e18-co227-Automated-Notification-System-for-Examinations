@@ -77,6 +77,27 @@ With this Automated Notification System that we are expecting to develop, the re
 <p class="caption text-center"></p>
 </div>
 
+# Steps of the implementation
+
+#### STEP 01 : Get google sheet data and store in a database
+- Access the google sheet with the credentials
+- Call the sheets API and get the information
+- Connect the database
+- Insert data into the database
+#### STEP 02 : Fetching data from Database
+- Use SQL query for selecting the required data
+- Designing the content of the amil body
+#### STEP 03 : Send EMail
+- Email messages can be easily sent by using python. But, there are few requirements. In order to send emails from python users, it is needed to provide "Less secure app access" permission. But, Google shutdown this feature. However, this limitation does not apply to Google Workspace or Google Cloud identity users.
+#### STEP 04 : Send Discord messages
+- To send discord messages two things are required.
+- Token : Token is used to identify the sender of the message
+- Channel ID : Channel ID is used to identify the receiver of the message
+#### STEP 05 : Upload the system to a server
+- We use pythonanywhere as the server of our system. Even with a free account at python anywhere we can host our python
+scripts there. Also, we can schedule tasks (similar to linux crontabs) very easily. We can even create our database in pythonanywhere which helps its users to use most services at a single place.
+
+
 # Google Account Setup
 
 - [Follow this video](https://www.youtube.com/embed/txRbFpupne0){:target="_blank"}
@@ -89,12 +110,12 @@ With this Automated Notification System that we are expecting to develop, the re
 
 # Installation Procedure
 #### (steps are given to run the system in PythonAnywhere, after creating the keys.json file using config,ini and createJson.py)
-#### using the website created (Recommended)
+#### Using the website created (Recommended)
 - Create a task in Pythonanywhere by using fetchfromdb.py 
 - Create the Database by running the createtables.sql file
 - Use the website to initiate the system(create the google sheet & store the data in the database)
 
-#### manual running
+#### Manual running
 - Create a task in Pythonanywhere by using fetchfromdb.py 
 - Create the Database by running the createtables.sql file
 - create the google sheet(the link is provided inside the sheetToDB.py file. If the user create any other google sheet he has to manually update all the files which uses specific data about the google sheet)
