@@ -1,9 +1,4 @@
 from __future__ import print_function
-# from distutils.sysconfig import customize_compiler
-# from google.auth.transport.requests import Request
-# from google.oauth2.credentials import Credentials
-# from google_auth_oauthlib.flow import InstalledAppFlow
-# from googleapiclient.errors import HttpError
 import mysql.connector
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
@@ -15,8 +10,7 @@ import configparser
 #---------------------------------------function to convert date and time in to the required format--------------------------
 def convertDatetime(dateInSheetFormat):
    my_date_string = dateInSheetFormat.strip() + " 12:00AM"
-   #print('testing:',my_date_string)
-
+   
    datetime_object = datetime.strptime(my_date_string, '%d %b %Y %I:%M%p')
 
    #YYYY-MM-DD HH:mm:SS
@@ -67,11 +61,7 @@ def fromsheet():
    NumberOfCourses = int(len(values)/4) #so the values are takes only the data entered cells
 
    print(values)
-   # print('{}:{}'.format(values[0][0],values[0][1])) #printing the course code and the name
-   # print('{}\n{}\n{}\n{}'.format(values[0][2], values[1][2], values[2][2], values[3][2] ))
-
-
-
+   
    #***************************************************** DATABASE *********************************************************
    #establishing the connection
 
@@ -88,7 +78,6 @@ def fromsheet():
    query1 = """INSERT IGNORE INTO Examination(Examination_id,Examination_name) VALUES('{}','{}')"""
    query2 = """INSERT IGNORE INTO PAPER(COURSE_CODE,EXAMINATION_ID,COORDINATOR_ID,SUB_COORDINATOR_ID,MODERATOR_ID,SUB_MODERATOR_ID) VALUES('{}','{}','{}','{}','{}','{}')"""
    query3 = """SELECT Id FROM lecturer WHERE Name = '{}'"""
-   #query4 = """SELECT Examination_id FROM EXAMINATION"""
    query5 = """INSERT IGNORE INTO PHASE(PHASE_CODE,COURSE_CODE,DUE_DATE) VALUES('{}','{}','{}')"""
 
    lecturer_id = []

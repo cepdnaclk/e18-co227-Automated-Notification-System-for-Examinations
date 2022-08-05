@@ -23,11 +23,8 @@ def sendRemainder(receiver_address, subject,msg,departmentDetails):
     message['To'] = receiver_address
     message['Subject'] = subject
     
-    #The body and the attachments for the mail
-    
-    #mail_content_coordinator = msg
-    #message.attach(MIMEText(mail_content_coordinator, 'plain'))
-    
+
+ 
     #------------------------------------------------customizing the message content----------------------------------------------------
     messageBody = msg.split("|")
     departmentName = ''
@@ -41,11 +38,6 @@ def sendRemainder(receiver_address, subject,msg,departmentDetails):
     #---------------------------------------to-------task-----Dr.name,--message--date-----
     message.attach(MIMEText('<html><body><p>{}</p><h3>{}</h3><p>{}</p><p>{}<b>{}</b></p>Thank you.</body></html>'.format(messageBody[0],messageBody[1],messageBody[2],messageBody[3],messageBody[4],messageBody[5]), 'html', 'utf-8'))
     
-    # GIF countdown timer(only for few seconds) 
-    #message.attach(MIMEText('<html><body>' +
-    #                            '<p><img src="https://gifcdn.com/d1g6op3cb9h68pj2d1n.gif?v=1656471377"></p>' +
-    #                           '</body></html>', 'html', 'utf-8')
-
     #ignore message
     message.attach(MIMEText('<html><body>' +
                                 '<h4><i>{}</i></h4>'.format(messageBody[5]) +
